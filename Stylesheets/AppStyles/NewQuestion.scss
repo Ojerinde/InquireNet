@@ -1,0 +1,39 @@
+.new__question {
+  &--card {
+    width: 45%;
+    margin: 5rem auto 2rem auto;
+  }
+  &--box {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: right;
+    & button {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp--large) {
+  .new__question {
+    &--card {
+      width: 65%;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp--medium) {
+  .new__question {
+    &--card {
+      width: 75%;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp--small) {
+  .new__question {
+    &--card {
+      width: 80%;
+    }
+  }
+}

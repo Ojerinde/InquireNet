@@ -1,0 +1,90 @@
+.main {
+  &__header {
+    background-color: $primary-color;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--logo {
+      flex-basis: 23%;
+      display: flex;
+      align-items: center;
+
+      & h3 {
+        margin-left: 2rem;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: $secondary-color;
+      }
+    }
+    &--icon {
+      height: 2.5rem;
+      width: 2.5rem;
+      cursor: pointer;
+      fill: $primary-light-color;
+      transition: all 0.3s;
+
+      &:hover {
+        fill: $secondary-color;
+      }
+    }
+    & nav {
+      flex-basis: 47%;
+
+      & ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        & li {
+          & a:link,
+          & a:visited {
+            text-decoration: none;
+            padding: 0.7rem 0.9rem;
+            color: $secondary-color;
+            border-radius: 0.7rem;
+            font-size: 1.5rem;
+            font-weight: 400;
+            transition: all 0.3s;
+          }
+
+          & a:hover {
+            background-color: $primary-dark-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.activeNav {
+  color: $primary-light-color !important;
+  background-color: $secondary-dark-color;
+}
+
+@media only screen and (max-width: $bp--large) {
+  .main__header {
+    flex-wrap: wrap;
+
+    & nav {
+      flex-basis: 70%;
+      & ul {
+        justify-content: flex-end;
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp--medium) {
+  .main__header {
+    & nav {
+      margin-top: 1.5rem;
+      flex-basis: 100%;
+      & ul {
+        justify-content: space-between;
+      }
+    }
+  }
+}

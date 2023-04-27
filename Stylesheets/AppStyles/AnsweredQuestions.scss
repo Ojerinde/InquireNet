@@ -1,0 +1,8 @@
+.no__question {
+    height: calc(100vh - 117px);
+    width: 100%;
+    @include flex-center;
+    color: rgb(116, 196, 239);
+    font-size: 3rem;
+    letter-spacing: .1rem;
+}
